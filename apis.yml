@@ -1,0 +1,121 @@
+name: Microsoft SQL Server
+description: A relational database management system developed by Microsoft for enterprise-scale data management and business intelligence solutions
+image: https://www.microsoft.com/sql-server/logo.png
+url: https://www.microsoft.com/sql-server
+created: '2024'
+modified: '2024'
+specificationVersion: '0.18'
+tags:
+- Database
+- SQL
+- Relational Database
+- Enterprise
+- Cloud
+- Data Management
+apis:
+- name: SQL Server Database Engine API
+  description: Core database engine APIs for querying, managing, and administering SQL Server databases
+  image: https://www.microsoft.com/sql-server/database-engine-logo.png
+  humanURL: https://docs.microsoft.com/sql/sql-server/
+  baseURL: https://your-server.database.windows.net
+  tags:
+  - Database
+  - Query
+  - Transact-SQL
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
+  - type: OpenAPI
+    url: https://docs.microsoft.com/sql/connect/
+  - type: Authentication
+    url: https://docs.microsoft.com/sql/relational-databases/security/authentication-access/
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+    url: https://support.microsoft.com/sql
+- name: SQL Server Management Objects (SMO) API
+  description: .NET API for managing and administering SQL Server programmatically
+  humanURL: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/
+  baseURL: https://api.example.com/smo
+  tags:
+  - Management
+  - Administration
+  - .NET
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
+  - type: SDK
+    url: https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects
+  - type: Code Samples
+    url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/create-program/
+- name: Azure SQL Database REST API
+  description: REST API for managing Azure SQL Database resources and configurations
+  humanURL: https://docs.microsoft.com/rest/api/sql/
+  baseURL: https://management.azure.com
+  tags:
+  - Azure
+  - Cloud
+  - REST API
+  - Database Management
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/rest/api/sql/
+  - type: OpenAPI
+    url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/sql
+  - type: Authentication
+    url: https://docs.microsoft.com/azure/active-directory/develop/
+  - type: Pricing
+    url: https://azure.microsoft.com/pricing/details/sql-database/
+  contact:
+  - FN: Azure Support
+    email: azuresupport@microsoft.com
+    url: https://azure.microsoft.com/support/
+- name: SQL Server Reporting Services (SSRS) API
+  description: REST API for managing reports, subscriptions, and data sources in SQL Server Reporting Services
+  humanURL: https://docs.microsoft.com/sql/reporting-services/
+  baseURL: https://your-server/reports/api/v2.0
+  tags:
+  - Reporting
+  - Business Intelligence
+  - REST API
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/sql/reporting-services/developer/rest-api
+  - type: OpenAPI
+    url: https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0
+  - type: Tutorial
+    url: https://docs.microsoft.com/sql/reporting-services/tutorial-access-rest-api
+- name: SQL Server Integration Services (SSIS) Catalog API
+  description: API for managing SSIS packages, projects, and execution in the SSIS Catalog
+  humanURL: https://docs.microsoft.com/sql/integration-services/
+  baseURL: https://your-server/SSISDB
+  tags:
+  - ETL
+  - Integration
+  - Data Pipeline
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/sql/integration-services/service/package-management-ssis-service
+  - type: Stored Procedures
+    url: https://docs.microsoft.com/sql/integration-services/system-stored-procedures/
+common:
+- type: Getting Started
+  url: https://docs.microsoft.com/sql/sql-server/sql-server-get-started
+- type: Downloads
+  url: https://www.microsoft.com/sql-server/sql-server-downloads
+- type: Pricing
+  url: https://www.microsoft.com/sql-server/sql-server-2022-pricing
+- type: Support
+  url: https://support.microsoft.com/sql
+- type: Blog
+  url: https://cloudblogs.microsoft.com/sqlserver/
+- type: Community
+  url: https://techcommunity.microsoft.com/t5/sql-server/ct-p/SQLServer
+- type: Training
+  url: https://docs.microsoft.com/learn/sql-server/
+- type: Release Notes
+  url: https://docs.microsoft.com/sql/sql-server/sql-server-version-information
+maintainers:
+- FN: Microsoft Corporation
+  email: sqlserver@microsoft.com
+  url: https://www.microsoft.com/sql-server
