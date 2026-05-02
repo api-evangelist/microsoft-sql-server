@@ -6,7 +6,7 @@ description: >-
 image: https://www.microsoft.com/sql-server/logo.png
 url: https://www.microsoft.com/sql-server
 created: '2024'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 tags:
   - Cloud
