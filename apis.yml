@@ -282,7 +282,7 @@ apis:
       - type: SDK
         url: https://www.npmjs.com/package/mssql
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.microsoft.com/sql/sql-server/sql-server-get-started
   - type: Downloads
     url: https://www.microsoft.com/sql-server/sql-server-downloads
@@ -296,11 +296,11 @@ common:
     url: https://techcommunity.microsoft.com/t5/sql-server/ct-p/SQLServer
   - type: Training
     url: https://docs.microsoft.com/learn/sql-server/
-  - type: Release Notes
+  - type: ReleaseNotes
     url: https://docs.microsoft.com/sql/sql-server/sql-server-version-information
   - type: Driver History
     url: https://learn.microsoft.com/en-us/sql/connect/connect-history
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/microsoft/sql-server-samples
   - type: ChangeLog
     url: https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2025
