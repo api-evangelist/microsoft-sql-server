@@ -282,6 +282,8 @@ apis:
       - type: SDK
         url: https://www.npmjs.com/package/mssql
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/msft-sql-server
   - type: GettingStarted
     url: https://docs.microsoft.com/sql/sql-server/sql-server-get-started
   - type: Downloads
