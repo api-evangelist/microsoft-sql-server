@@ -52,7 +52,7 @@ apis:
   properties:
   - type: Documentation
     url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
-  - type: SDK
+  - type: SDKs
     url: https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects
   - type: Code Samples
     url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/create-program/
@@ -190,7 +190,7 @@ apis:
     url: https://learn.microsoft.com/en-us/sql/connect/ado-net/overview-sqlclient-driver
   - type: APIReference
     url: https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient
-  - type: SDK
+  - type: SDKs
     url: https://www.nuget.org/packages/Microsoft.Data.SqlClient
   - type: Download
     url: https://learn.microsoft.com/en-us/sql/connect/ado-net/download-microsoft-sqlclient-data-provider
@@ -263,7 +263,7 @@ apis:
     url: https://learn.microsoft.com/en-us/sql/connect/python/mssql-python/python-sql-driver-mssql-python-quickstart
   - type: SourceCode
     url: https://github.com/microsoft/mssql-python
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/mssql-python/
 - name: Node.js Driver for SQL Server (tedious)
   description: >-
@@ -281,7 +281,7 @@ apis:
     url: https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server
   - type: SourceCode
     url: https://github.com/tediousjs/tedious
-  - type: SDK
+  - type: SDKs
     url: https://www.npmjs.com/package/mssql
 common:
 - type: LinkedIn
@@ -308,7 +308,7 @@ common:
   url: https://github.com/microsoft/sql-server-samples
 - type: ChangeLog
   url: https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2025
-- type: Forum
+- type: Forums
   url: https://learn.microsoft.com/en-us/answers/tags/191/sql-server
 - type: Feedback
   url: https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0
