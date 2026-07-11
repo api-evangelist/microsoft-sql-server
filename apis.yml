@@ -284,6 +284,12 @@ apis:
   - type: SDKs
     url: https://www.npmjs.com/package/mssql
 common:
+- type: VulnerabilityDisclosure
+  url: security/microsoft-sql-server-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/microsoft-sql-server-domain-security.yml
+- type: Authentication
+  url: authentication/microsoft-sql-server-authentication.yml
 - type: OAuthScopes
   url: scopes/microsoft-sql-server-scopes.yml
 - type: LinkedIn
