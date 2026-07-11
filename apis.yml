@@ -284,6 +284,8 @@ apis:
   - type: SDKs
     url: https://www.npmjs.com/package/mssql
 common:
+- type: OAuthScopes
+  url: scopes/microsoft-sql-server-scopes.yml
 - type: LinkedIn
   url: https://www.linkedin.com/showcase/msft-sql-server
 - type: GettingStarted

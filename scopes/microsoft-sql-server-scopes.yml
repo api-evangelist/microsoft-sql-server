@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/microsoft-sql-server-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/microsoft-sql-server-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: For Azure SQL management endpoints, authenticate via Microsoft Entra ID against
+    https://management.azure.com/.default. Data API Builder endpoints can be configured to use
+    anonymous, EasyAuth, JWT, or Microsoft Entra ID authentication depending on deployment.
+scopes:
+- scope: https://management.azure.com/.default
+  description: Manage Azure resources
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/microsoft-sql-server-openapi.yml
