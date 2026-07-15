@@ -284,6 +284,8 @@ apis:
   - type: SDKs
     url: https://www.npmjs.com/package/mssql
 common:
+- type: AgenticAccess
+  url: agentic-access/microsoft-sql-server-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/microsoft-sql-server-vulnerability-disclosure.yml
 - type: DomainSecurity
