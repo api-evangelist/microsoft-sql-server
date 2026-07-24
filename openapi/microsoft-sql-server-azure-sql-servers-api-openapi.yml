@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Microsoft SQL Server - Azure SQL & Data API Builder HTTP APIs Azure SQL Databases Azure SQL Servers API
+  description: A consolidated view of the HTTP-accessible APIs in the Microsoft SQL Server ecosystem. This document covers (1) the Azure Resource Manager REST API for managing Azure SQL Database resources and (2) the Data API Builder (DAB) runtime that exposes REST endpoints over SQL Server, Azure SQL, PostgreSQL, MySQL, and Azure Cosmos DB. Native SQL Server drivers (ODBC, JDBC, SqlClient, OLE DB, tedious, mssql-python) are not HTTP APIs and are not represented here.
+  version: '2025-01-01'
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager - Azure SQL Database management
+- url: https://{host}
+  description: Data API Builder runtime
+  variables:
+    host:
+      default: localhost:5001
+security:
+- oauth2: []
+tags:
+- name: Azure SQL Servers
+paths:
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers:
+    get:
+      tags:
+      - Azure SQL Servers
+      summary: List SQL servers in a resource group
+      operationId: listServers
+      parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/ApiVersion'
+      responses:
+        '200':
+          description: Server list
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    ResourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
+    ApiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        example: '2025-01-01'
+    SubscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: For Azure SQL management endpoints, authenticate via Microsoft Entra ID against https://management.azure.com/.default. Data API Builder endpoints can be configured to use anonymous, EasyAuth, JWT, or Microsoft Entra ID authentication depending on deployment.
+      flows:
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://management.azure.com/.default: Manage Azure resources
+x-generated-from: https://learn.microsoft.com/en-us/rest/api/sql/databases
+x-generated-by: claude-genwave10-08-2026-05-23

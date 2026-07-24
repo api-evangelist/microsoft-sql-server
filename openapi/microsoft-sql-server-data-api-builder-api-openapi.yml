@@ -1,0 +1,208 @@
+openapi: 3.1.0
+info:
+  title: Microsoft SQL Server - Azure SQL & HTTP APIs Azure SQL Databases Data API Builder API
+  description: A consolidated view of the HTTP-accessible APIs in the Microsoft SQL Server ecosystem. This document covers (1) the Azure Resource Manager REST API for managing Azure SQL Database resources and (2) the Data API Builder (DAB) runtime that exposes REST endpoints over SQL Server, Azure SQL, PostgreSQL, MySQL, and Azure Cosmos DB. Native SQL Server drivers (ODBC, JDBC, SqlClient, OLE DB, tedious, mssql-python) are not HTTP APIs and are not represented here.
+  version: '2025-01-01'
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager - Azure SQL Database management
+- url: https://{host}
+  description: Data API Builder runtime
+  variables:
+    host:
+      default: localhost:5001
+security:
+- oauth2: []
+tags:
+- name: Data API Builder
+paths:
+  /api/{entity}:
+    get:
+      tags:
+      - Data API Builder
+      summary: List records from a DAB entity
+      operationId: dabListEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      - name: $select
+        in: query
+        schema:
+          type: string
+      - name: $filter
+        in: query
+        schema:
+          type: string
+      - name: $orderby
+        in: query
+        schema:
+          type: string
+      - name: $first
+        in: query
+        schema:
+          type: integer
+      - name: $after
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Records (with optional nextLink)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: object
+                  nextLink:
+                    type: string
+                    format: uri
+    post:
+      tags:
+      - Data API Builder
+      summary: Create a new record
+      operationId: dabCreateEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/{entity}/{pkColumn}/{pkValue}:
+    get:
+      tags:
+      - Data API Builder
+      summary: Get a single record by primary key
+      operationId: dabGetEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      - name: pkColumn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pkValue
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Record (or empty value array)
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Data API Builder
+      summary: Update a record
+      operationId: dabPatchEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      - name: pkColumn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pkValue
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          description: Not found
+    put:
+      tags:
+      - Data API Builder
+      summary: Replace a record (or upsert when supported)
+      operationId: dabPutEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      - name: pkColumn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pkValue
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Replaced/Upserted
+        '404':
+          description: Not found
+    delete:
+      tags:
+      - Data API Builder
+      summary: Delete a record
+      operationId: dabDeleteEntity
+      parameters:
+      - $ref: '#/components/parameters/DabEntity'
+      - name: pkColumn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pkValue
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Deleted
+        '404':
+          description: Not found
+components:
+  parameters:
+    DabEntity:
+      name: entity
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Name of the entity exposed by Data API Builder.
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: For Azure SQL management endpoints, authenticate via Microsoft Entra ID against https://management.azure.com/.default. Data API Builder endpoints can be configured to use anonymous, EasyAuth, JWT, or Microsoft Entra ID authentication depending on deployment.
+      flows:
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://management.azure.com/.default: Manage Azure resources
+x-generated-from: https://learn.microsoft.com/en-us/rest/api/sql/databases
+x-generated-by: claude-genwave10-08-2026-05-23
