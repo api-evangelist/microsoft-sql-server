@@ -1,0 +1,18 @@
+{
+  "provider": "microsoft-sql-server",
+  "sources": [
+    "microsoft-sql-server-azure-sql-databases-api-openapi.yml",
+    "microsoft-sql-server-azure-sql-servers-api-openapi.yml",
+    "microsoft-sql-server-data-api-builder-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-sql-server-azure-sql-databases-api-openapi.yml",
+    "microsoft-sql-server-azure-sql-servers-api-openapi.yml",
+    "microsoft-sql-server-data-api-builder-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
