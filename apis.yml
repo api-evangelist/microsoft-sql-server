@@ -335,6 +335,19 @@ apis:
   - type: APIReference
     url: https://learn.microsoft.com/en-us/rest/api/sql-server-reporting/
 common:
+- type: IssueTracker
+  url: https://github.com/Azure/data-api-builder/issues
+- type: Releases
+  url: https://github.com/Azure/data-api-builder/releases
+- type: SecurityPolicy
+  url: https://github.com/Azure/data-api-builder/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/Azure/data-api-builder/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/Azure/data-api-builder/blob/main/CONTRIBUTING.md
+- type: License
+  name: MIT
+  url: https://github.com/Azure/data-api-builder/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/microsoft-sql-server-agentic-access.yml
 - type: VulnerabilityDisclosure
