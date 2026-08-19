@@ -20,7 +20,7 @@ image: https://www.microsoft.com/sql-server/logo.png
 url: https://www.microsoft.com/sql-server
 created: '2024'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
 - Cloud
 - Data Management
@@ -43,7 +43,7 @@ apis:
       https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
   - type: SDKs
     url: https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects
-  - type: Code Samples
+  - type: CodeExamples
     url: >-
       https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/create-program/
 - name: SQL Server Integration Services (SSIS) Catalog API
