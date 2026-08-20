@@ -94,6 +94,12 @@ apis:
   - CRUD
   - Data Access
   - GraphQL
+  - Open-Source
+  - REST API
+  tags_raw:
+  - CRUD
+  - Data Access
+  - GraphQL
   - Open Source
   - REST API
   properties:
