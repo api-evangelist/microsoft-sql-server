@@ -355,6 +355,8 @@ apis:
   - type: APIReference
     url: https://learn.microsoft.com/en-us/rest/api/sql-server-reporting/
 common:
+- type: Website
+  url: https://www.microsoft.com/
 - type: IssueTracker
   url: https://github.com/Azure/data-api-builder/issues
 - type: Releases
@@ -427,3 +429,5 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
   url: https://apievangelist.com
+x-parent: microsoft
+x-relationship: product
