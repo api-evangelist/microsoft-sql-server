@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft SQL Server - Azure SQL & HTTP APIs Azure SQL Databases Data API Builder API
+  title: Microsoft SQL Server - Azure SQL & HTTP Data API Builder API
   description: A consolidated view of the HTTP-accessible APIs in the Microsoft SQL Server ecosystem. This document covers (1) the Azure Resource Manager REST API for managing Azure SQL Database resources and (2) the Data API Builder (DAB) runtime that exposes REST endpoints over SQL Server, Azure SQL, PostgreSQL, MySQL, and Azure Cosmos DB. Native SQL Server drivers (ODBC, JDBC, SqlClient, OLE DB, tedious, mssql-python) are not HTTP APIs and are not represented here.
   version: '2025-01-01'
 servers:
