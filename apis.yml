@@ -106,7 +106,7 @@ apis:
   - CRUD
   - Data Access
   - GraphQL
-  - Open-Source
+  - Open Source
   - REST API
   tags_raw:
   - CRUD
@@ -114,6 +114,7 @@ apis:
   - GraphQL
   - Open Source
   - REST API
+  - Open-Source
   properties:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/data-api-builder/
@@ -461,7 +462,7 @@ apis:
   - Azure
   - Data API
   - GraphQL
-  - Open-Source
+  - Open Source
   - REST
   tags_raw:
   - Azure
@@ -469,6 +470,7 @@ apis:
   - GraphQL
   - Open Source
   - REST
+  - Open-Source
   properties:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/data-api-builder/overview
