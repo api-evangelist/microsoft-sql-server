@@ -133,44 +133,7 @@ paths:
         '202':
           description: Accepted
 components:
-  parameters:
-    ServerName:
-      name: serverName
-      in: path
-      required: true
-      schema:
-        type: string
-    ResourceGroupName:
-      name: resourceGroupName
-      in: path
-      required: true
-      schema:
-        type: string
-    ApiVersion:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-        example: '2025-01-01'
-    SubscriptionId:
-      name: subscriptionId
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
   schemas:
-    DatabaseListResult:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Database'
-        nextLink:
-          type: string
-          format: uri
     Database:
       type: object
       properties:
@@ -203,6 +166,43 @@ components:
             creationDate:
               type: string
               format: date-time
+    DatabaseListResult:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Database'
+        nextLink:
+          type: string
+          format: uri
+  parameters:
+    SubscriptionId:
+      name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    ApiVersion:
+      name: api-version
+      in: query
+      required: true
+      schema:
+        type: string
+        example: '2025-01-01'
+    ServerName:
+      name: serverName
+      in: path
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      name: resourceGroupName
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     oauth2:
       type: oauth2
