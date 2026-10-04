@@ -709,6 +709,9 @@ apis:
   - FN: Microsoft Support
     email: support@microsoft.com
 common:
+- type: CapabilityMap
+  url: capabilities/microsoft-sql-server-capability-edges.yml
+  name: Microsoft SQL Server Business Capability Map
 - type: Packages
   url: packages/microsoft-sql-server-packages.yml
 - type: WellKnown
