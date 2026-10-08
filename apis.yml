@@ -709,6 +709,12 @@ apis:
   - FN: Microsoft Support
     email: support@microsoft.com
 common:
+- type: Plans
+  url: plans/microsoft-sql-server-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/microsoft-sql-server-rate-limits.yml
+- type: FinOps
+  url: finops/microsoft-sql-server-finops.yml
 - type: CapabilityMap
   url: capabilities/microsoft-sql-server-capability-edges.yml
   name: Microsoft SQL Server Business Capability Map
