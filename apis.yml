@@ -80,6 +80,12 @@ apis:
     https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/api-references-create-manage-instance
   baseURL: https://management.azure.com
   tags:
+  - Microsoft Azure
+  - Cloud
+  - Database Management
+  - Managed Instance
+  - REST API
+  tags_raw:
   - Azure
   - Cloud
   - Database Management
@@ -131,6 +137,12 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/analysisservices/
   baseURL: https://management.azure.com
   tags:
+  - Analysis Services
+  - Microsoft Azure
+  - Business Intelligence
+  - REST API
+  - Tabular Models
+  tags_raw:
   - Analysis Services
   - Azure
   - Business Intelligence
@@ -459,7 +471,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/azure/data-api-builder/
   baseURL: ''
   tags:
-  - Azure
+  - Microsoft Azure
   - Data API
   - GraphQL
   - Open Source
@@ -605,6 +617,10 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/sql/connect/golang/microsoft-go-mssqldb-driver
   baseURL: ''
   tags:
+  - Connectivity
+  - Driver
+  - Go
+  tags_raw:
   - Connectivity
   - Driver
   - Go
