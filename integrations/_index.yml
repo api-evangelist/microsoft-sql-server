@@ -100,3 +100,103 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: microsoft-sql-server-airbyte
+  label: Airbyte
+  partner: airbyte
+  partner_name: Airbyte
+  type: marketplace
+  marketplace: airbyte-registry
+  channel: elt-connector
+  evidence: https://docs.airbyte.com/integrations/sources/mssql
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Airbyte connector registry (connectors.airbyte.com cloud_registry.json + oss_registry.json)
+    spec_file: null
+    role: elt-connector:airbyte-certified
+    registered_name: Microsoft SQL Server (MSSQL)
+    matched_domain: microsoft.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    connectors:
+    - airbyte/source-mssql
+    support_level:
+    - certified
+    release_stage:
+    - alpha
+    in_cloud: true
+    builder: Airbyte (certified)
+    standard: Airbyte certified connector
+    certified_products:
+    - product: Airbyte certified source
+      type: source
+      lapsed: false
+      cloud: true
+  status: pending-generation
+  arazzo: null
+- slug: microsoft-sql-server-fivetran
+  label: Fivetran
+  partner: fivetran
+  partner_name: Fivetran
+  type: marketplace
+  marketplace: fivetran-connectors
+  channel: elt-connector
+  evidence: https://fivetran.com/docs/connectors/databases/sql-server
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Fivetran connectors (fivetran.com/docs/connectors, docs-sitemap.xml + Partner-Built program)
+    spec_file: null
+    role: elt-connector:fivetran
+    registered_name: SQL Server
+    matched_domain: microsoft.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    connector_paths:
+    - connectors/databases/sql-server
+    vendor_link: https://www.microsoft.com/en-us/sql-server/sql-server-2017
+    builder: Fivetran
+  status: pending-generation
+  arazzo: null
+- slug: microsoft-sql-server-meltano
+  label: Meltano
+  partner: meltano
+  partner_name: Meltano
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  evidence: https://hub.meltano.com/extractors/tap-mssql--airbyte
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: Microsoft SQL Server
+    matched_domain: microsoft.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-mssql--airbyte
+    - tap-mssql--buzzcutnorman
+    - tap-mssql--cmoresid
+    - tap-mssql--singer-io
+    - tap-mssql--wintersrd
+    - target-mssql--meltanolabs
+    - target-mssql--storebrand
+    maintenance_status:
+    - active
+    - beta
+    - unknown
+    quality:
+    - gold
+    - silver
+    builder: 'community (Meltano Hub variant maintainers: airbyte, buzzcutnorman, cmoresid, meltanolabs, singer-io)'
+  status: pending-partner-spec
+  arazzo: null
