@@ -134,7 +134,7 @@
       type: source
       lapsed: false
       cloud: true
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: microsoft-sql-server-fivetran
   label: Fivetran
@@ -160,7 +160,7 @@
     - connectors/databases/sql-server
     vendor_link: https://www.microsoft.com/en-us/sql-server/sql-server-2017
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: microsoft-sql-server-meltano
   label: Meltano
@@ -198,5 +198,5 @@
     - gold
     - silver
     builder: 'community (Meltano Hub variant maintainers: airbyte, buzzcutnorman, cmoresid, meltanolabs, singer-io)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
